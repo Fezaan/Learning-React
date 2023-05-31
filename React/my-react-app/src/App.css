@@ -40,3 +40,8 @@
 .heading{
   color: blueviolet;
 }
+
+ul li img{
+  width: 300px;
+  height: 200px;
+}
