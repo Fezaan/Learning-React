@@ -1,39 +1,41 @@
-import logo from "./logo.svg";
 import "./App.css";
 
-const img = "https://picsum.photos/200/300";
+const date = new Date();
+const time = date.getHours();
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const obj={
+  color: "blue",
+  fontSize: "40px",
+  border: "1px dotted green"
 }
 
-const obj = {
-  color: "purple",
-  fontSize: "40px",
-};
-
-obj.color = "red";
 export default function List() {
-  return (
-    <>
-      <h1 style={obj}>Even i don't know what is happening anymore</h1>
-    </>
-  );
+  if (time >= 5 && time < 11) {
+    obj.color="orange";
+    return (
+      <>
+        <h1 style={obj}>Good Morning</h1>
+      </>
+    );
+  } else if (time >= 11 && time < 16) {
+    obj.color="yellow";
+    return (
+      <>
+        <h1 style={obj}>Good Afternoon</h1>
+      </>
+    );
+  } else if (time >= 16 && time < 19) {
+    obj.color= "red";
+    return (
+      <>
+        <h1 style={obj}>Good Evening</h1>
+      </>
+    );
+  } else {
+    return (
+      <>
+        <h1 style={obj}>Good Night</h1>
+      </>
+    );
+  }
 }
