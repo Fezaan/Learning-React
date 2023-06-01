@@ -21,7 +21,7 @@ export default function Logic(){
         obj.color= "red";
         greeting="Good Evening";
     } else {
-        obj.greeting="Good Night";
+        greeting="Good Night";
     }
     return(<><h1 className="heading" style={obj}>{greeting}</h1></>)
 }
